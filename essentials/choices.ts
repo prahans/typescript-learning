@@ -4,7 +4,7 @@
 //     Guest
 // }
 
-// type MyNumber = number;
+// type MyNumber = number;   
 type Role = 'admin' | 'editor' | 'guest';
 
 type user = {

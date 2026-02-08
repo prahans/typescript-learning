@@ -41,5 +41,5 @@ let data: Record<string, string | number>;
 
 data = {
     enter1 : 1,
-    enter2 : "some string"
+    enter2 : "some string",
 }
