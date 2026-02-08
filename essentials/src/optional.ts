@@ -11,6 +11,12 @@ type user = {
     role? : 'admin' | 'guest';
 };
 
-let input = '';
+// let input = '';
 // const didProvideInput = input || false;           // false
-const didProvideInput = input ?? false;              // ''
+// const didProvideInput = input ?? false;              // ''
+
+let user: user = {
+    name : "prahans",
+    age : 20,
+    role : 'guest'
+};

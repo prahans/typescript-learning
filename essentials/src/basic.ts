@@ -11,3 +11,5 @@ function add(a: number, b = 5){
 
 add(5,4); // 9
 add(5); //10
+
+console.log(age);

@@ -12,3 +12,11 @@ function process(val: unknown){
         val.log();
     } 
 }
+
+let greet = {
+    log(){
+        console.log(greet);
+    }
+}
+
+process(greet);
