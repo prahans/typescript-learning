@@ -1,13 +1,13 @@
 let hobbies = ["sport", "cooking"];
 
-//hobbies.push(10);
+hobbies.push("coding");
 
 // let user: (string | number)[]; //both are same 
 let user: Array<string | number>
 
 user = [1, "prahans"];
 user = ["anurag", "panuhar"];
-user = [1, 5];
+user = [1, 5, "hi"];
 
 // Tuples
 let possibleResult: [number, number]; // [-1, 1]

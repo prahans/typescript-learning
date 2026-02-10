@@ -14,6 +14,15 @@ type user = {
     permission: string[];
 }
 
+let person: user = {
+    name : "prahans",
+    age : 21,
+    role: 'editor',
+    permission: ["hello"]
+}
+
+console.log(person.name);
+
 let userRole: Role = 'admin';
 
 // ...

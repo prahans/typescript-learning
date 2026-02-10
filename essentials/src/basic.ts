@@ -9,6 +9,8 @@ function add(a: number, b = 5){
     return a + b;
 }
 
+let firstName = "anurag";
+
 add(5,4); // 9
 add(5); //10
 

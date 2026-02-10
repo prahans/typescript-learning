@@ -1,16 +1,16 @@
-function one(){
-    return 1;
-}
+// function one(){
+//     return 1;
+// }
 
-function two(){
-    return one() + one();
-}
+// function two(){
+//     return one() + one();
+// }
 
-function three(){
-    console.log(one() + two());
-}
+// function three(){
+//     console.log(one() + two());
+// }
 
-three();
+// three();
 
 
 let h1 = document.querySelector("h1") as HTMLElement;
@@ -93,94 +93,139 @@ let h1 = document.querySelector("h1") as HTMLElement;
 // )
 
 
-function savetoDb(data: string){
-    return new Promise((resolve, reject) => {
-        let internetSpeed = Math.floor(Math.random() * 10) + 1;
-        if(internetSpeed > 4){
-            resolve("success : data was saved");
-        }else {
-            reject("failure : weak connection");
-        }
-    });
-}
+// function savetoDb(data: string){
+//     return new Promise((resolve, reject) => {
+//         let internetSpeed = Math.floor(Math.random() * 10) + 1;
+//         if(internetSpeed > 4){
+//             resolve("success : data was saved");
+//         }else {
+//             reject("failure : weak connection");
+//         }
+//     });
+// }
 
-savetoDb("anurag")
-.then((result) => {
-    console.log(result);
-    console.log("data saved");
-    return savetoDb("javaScript");
-})
-.then((result) => {
-    console.log(result);
-    console.log("data2 saved");
-    return savetoDb("typescript");
-})
-.then((result) => {
-    console.log(result);
-    console.log("data3 saved");
-    return savetoDb("react");
-})
-.then((result) => {
-    console.log(result);
-    console.log("data4 saved");
-    return savetoDb("node js");
-})
-.then((result) => {
-    console.log(result);
-    console.log("data5 saved");
-    return savetoDb("express js");
-})
-.then((result) => {
-    console.log(result);
-    console.log("data6 saved");
-    return savetoDb("mongoDB");
-})
-.then((result) => {
-    console.log(result);
-    console.log("data7 saved");
-    return savetoDb("postgresql");
-})
-.then((result) => {
-    console.log(result);
-    console.log("data8 saved");
-})
-.catch((error) => {
-    console.log(error);
-    console.log("promis is rejected");
-})
+// savetoDb("anurag")
+// .then((result) => {
+//     console.log(result);
+//     console.log("data saved");
+//     return savetoDb("javaScript");
+// })
+// .then((result) => {
+//     console.log(result);
+//     console.log("data2 saved");
+//     return savetoDb("typescript");
+// })
+// .then((result) => {
+//     console.log(result);
+//     console.log("data3 saved");
+//     return savetoDb("react");
+// })
+// .then((result) => {
+//     console.log(result);
+//     console.log("data4 saved");
+//     return savetoDb("node js");
+// })
+// .then((result) => {
+//     console.log(result);
+//     console.log("data5 saved");
+//     return savetoDb("express js");
+// })
+// .then((result) => {
+//     console.log(result);
+//     console.log("data6 saved");
+//     return savetoDb("mongoDB");
+// })
+// .then((result) => {
+//     console.log(result);
+//     console.log("data7 saved");
+//     return savetoDb("postgresql");
+// })
+// .then((result) => {
+//     console.log(result);
+//     console.log("data8 saved");
+// })
+// .catch((error) => {
+//     console.log(error);
+//     console.log("promis is rejected");
+// })
  
  
-// refactoring old code
+// // refactoring old code
 
-function changeColor(color: string, delay: number){
-    return new Promise((resolve, reject) => {
-        setTimeout(() => {
-        h1.style.color = color;
-        resolve(`color changed to ${color}`);
-    }, delay);
-});
-}
+// function changeColor(color: string, delay: number){
+//     return new Promise((resolve, reject) => {
+//         setTimeout(() => {
+//         let num = Math.floor(Math.random() * 10) + 1;
+//         if(num < 5){
+//             reject("promise is rejected.");
+//         }
 
-changeColor("red", 1000)
-.then((result) => {
-    console.log(result);
-    return changeColor("orange", 1000);
+//         h1.style.color = color;
+//         console.log(`color changed to ${color}`)
+//         resolve("color changed");
+//     }, delay);
+// });
+// }
+
+// async function demo(){
+//     try{
+//         await changeColor("red", 1000);
+//     await changeColor("green", 1000);
+//     await changeColor("yellow", 1000);
+//     await changeColor("orange", 1000);
+//     await changeColor("blue", 1000);
+//     await changeColor("purple", 1000);
+//     }catch(err){
+//         console.log("error caught");
+//         console.log(err);
+//     }
+
+//     let a = 5;
+//     console.log(a);
+//     console.log("new number : ", a + 3);
+// }
+
+// demo();
+
+
+// changeColor("red", 1000)
+// .then((result) => {
+//     console.log(result);
+//     return changeColor("orange", 1000);
+// })
+// .then((result) => {
+//     console.log(result);
+//     return changeColor("green", 1000);
+// })
+// .then((result) => {
+//     console.log(result);
+//     return changeColor("blue", 1000);
+// })
+// .then((result) => {
+//     console.log(result);
+//     return changeColor("pink", 1000);
+// })
+// .then((result) => {
+//     console.log(result);
+//     return changeColor("purple", 1000);
+// }).then((result) => {
+//     console.log(result);
+// })
+
+// async function
+
+// async function greet(){
+//     throw "some random error"
+//     return "hello";
+// }
+
+let url = "https://catfact.ninja/fact";
+
+fetch(url)
+.then((res) => {
+    console.log(res)
+    console.log(res.json);
 })
-.then((result) => {
-    console.log(result);
-    return changeColor("green", 1000);
-})
-.then((result) => {
-    console.log(result);
-    return changeColor("blue", 1000);
-})
-.then((result) => {
-    console.log(result);
-    return changeColor("pink", 1000);
-})
-.then((result) => {
-    console.log(result);
-    return changeColor("purple", 1000);
-}).then((result) => {
-    console.log(result);
+.catch((err) => {
+    console.log(err);
 })
