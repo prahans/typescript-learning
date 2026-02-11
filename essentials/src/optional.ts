@@ -11,6 +11,7 @@ type user = {
     role? : 'admin' | 'guest';
 };
 
+// Nullish Coalescing
 // let input = '';
 // const didProvideInput = input || false;           // false
 // const didProvideInput = input ?? false;              // ''

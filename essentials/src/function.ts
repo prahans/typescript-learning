@@ -27,10 +27,12 @@ type User = {
     greet: () => string;
 }
 
-let user = {
+let user: User = {
     name : "prahans",
     age : 20,
     greet (){
         return "hello";
     }
 }
+
+user.greet();
