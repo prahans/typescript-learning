@@ -92,10 +92,19 @@ data = {
 
 // popular way to use enums
 
-let userRole: "Admin" | "User" | "Guest" = "Admin";
+type role = "Admin" | "User" | "Guest";
 
-userRole = "User"; // this is valid because userRole is of type "Admin" | "User" | "Guest"
-userRole = "Guest"; // this is valid because userRole is of type "Admin" | "User" | "Guest"
+type User = {
+  name: string;
+  id: number | string;
+  role: role;
+  permissions: string[];
+};
+
+let userRole: role = "Admin";
+
+userRole = "User"; // this is valid because userRole is of type role
+userRole = "Guest"; // this is valid because userRole is of type role
 
 let possibleResult: [1 | -1, 1 | -1];
 possibleResult = [1, -1]; // this is valid because possibleResult is a tuple of two numbers
@@ -104,5 +113,7 @@ possibleResult = [1, 1]; // this is valid because possibleResult is a tuple of t
 possibleResult = [-1, -1]; // this is valid because possibleResult is a tuple of two numbers
 // possibleResult = [1, 0]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 // possibleResult = [5, 1]; // this will cause a typescript error because possibleResult is a tuple of two numbers
+
+function access(userRole: role) {}
 
 export {};
