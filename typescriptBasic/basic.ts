@@ -39,4 +39,22 @@ possibleResult = [1, 2]; // thi is valid because possibleResult is a tuple of tw
 // possibleResult = [1, 2, 3]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 // possibleResult = [1, "2"]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 
+let userInfo: {
+  name: string;
+  age: number | string;
+  hobbines: string[];
+  role: {
+    discription: string;
+    id: number;
+  };
+} = {
+  name: "max",
+  age: 38,
+  hobbines: ["Reading", "Traveling", "Cooking"],
+  role: {
+    discription: "Admin",
+    id: 1,
+  },
+};
+
 export {};
