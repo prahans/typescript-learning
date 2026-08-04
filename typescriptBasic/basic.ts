@@ -65,4 +65,16 @@ val = ["Reading", "Traveling", "Cooking"]; // this is valid because val can be a
 // val = null; // this is invalid because val cannot be null
 // val = undefined; // this is invalid because val cannot be undefined
 
+let data: Record<string, string | number>;
+
+// data = "hello"; // this will cause a typescript error because data is a record of string keys and string or number values
+
+data = {
+  record1: 1,
+  record2: "hello",
+  record3: 3,
+  // record4: false, // this will cause a typescript error because data is a record of string keys and string or number values
+  // record5: ["Reading", "Traveling", "Cooking"], // this will cause a typescript error because data is a record of string keys and string or number values
+};
+
 export {};
