@@ -24,7 +24,7 @@ performJob(logMsg);
 type User = {
     name: string;
     age: number;
-    greet: () => string;
+    greet: () => void;
 }
 
 let user: User = {

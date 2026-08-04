@@ -21,6 +21,7 @@ let person: user = {
     permission: ["hello"]
 }
 
+
 console.log(person.name);
 
 let userRole: Role = 'admin';
