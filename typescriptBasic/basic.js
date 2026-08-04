@@ -22,4 +22,7 @@ let user;
 user = [1, 5];
 user = ["John", "Doe"];
 user = [1, "John", 5, "Doe"]; // this is valid because user can be an array of strings and numbers
+// tuples types
+let possibleResult;
+possibleResult = [1, 2]; // thi is valid because possibleResult is a tuple of two numbers
 export {};
