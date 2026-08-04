@@ -24,7 +24,8 @@ let hobbines = ["Reading", "Traveling", "Cooking"];
 // let hobbines: string[] = ["Reading", "Traveling", "Cooking"];
 // hobbines.push(10); // this will cause a typescript error because hobbines is an array of strings
 
-let user: (string | number)[];
+// let user: (string | number)[];
+let user: Array<string | number>;
 
 user = [1, 5];
 user = ["John", "Doe"];
