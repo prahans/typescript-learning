@@ -88,4 +88,10 @@ let userInfoObj = {
         return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
     },
 };
+let a = "hi";
+// ..
+a = null; // this is valid because a can be null
+let b = "hi";
+// ..
+b = undefined; // this is valid because b can be undefined
 export {};

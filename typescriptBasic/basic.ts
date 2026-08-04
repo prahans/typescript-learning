@@ -156,4 +156,12 @@ let userInfoObj: UserInfo = {
   },
 };
 
+let a: null | string = "hi";
+// ..
+a = null; // this is valid because a can be null
+
+let b: undefined | string = "hi";
+// ..
+b = undefined; // this is valid because b can be undefined
+
 export {};
