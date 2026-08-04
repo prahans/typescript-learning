@@ -57,4 +57,12 @@ let userInfo: {
   },
 };
 
+let val: {} = "Hello World"; // this is valid because val can be any type of value
+val = 10; // this is valid because val can be any type of value
+val = true; // this is valid because val can be any type of value
+val = { name: "John Doe" }; // this is valid because val can be any type of value
+val = ["Reading", "Traveling", "Cooking"]; // this is valid because val can be any type of value
+// val = null; // this is invalid because val cannot be null
+// val = undefined; // this is invalid because val cannot be undefined
+
 export {};
