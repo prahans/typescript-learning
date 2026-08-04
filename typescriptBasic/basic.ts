@@ -77,4 +77,17 @@ data = {
   // record5: ["Reading", "Traveling", "Cooking"], // this will cause a typescript error because data is a record of string keys and string or number values
 };
 
+// working with emums
+
+enum role {
+  Admin = "ADMIN",
+  User = "USER",
+  Guest = "GUEST",
+}
+
+let userRole: role;
+
+userRole = role.User; // this is valid because userRole is of type role
+//  userRole = "guest"; // this will cause a typescript error because userRole is of type role
+
 export {};
