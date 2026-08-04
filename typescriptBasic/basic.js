@@ -63,4 +63,29 @@ possibleResult = [-1, -1]; // this is valid because possibleResult is a tuple of
 // possibleResult = [1, 0]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 // possibleResult = [5, 1]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 function access(userRole) { }
+function addNumbers(a, b) {
+    return a + b;
+}
+function log(message) {
+    console.log(message);
+}
+function logAndThrowError(message) {
+    console.log(message);
+    throw new Error(message);
+}
+const logMsg = (msg) => {
+    console.log(msg);
+};
+function perfromJob(cb, message) {
+    cb(message);
+}
+perfromJob(logMsg, "Hello World"); // this is valid because logMsg is a function that takes a string as an argument and returns void
+let userInfoObj = {
+    name: "John Doe",
+    age: 38,
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+        return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+    },
+};
 export {};

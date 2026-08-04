@@ -116,4 +116,44 @@ possibleResult = [-1, -1]; // this is valid because possibleResult is a tuple of
 
 function access(userRole: role) {}
 
+function addNumbers(a: number, b: number) {
+  return a + b;
+}
+
+function log(message: string) {
+  console.log(message);
+}
+
+function logAndThrowError(message: string): never {
+  console.log(message);
+  throw new Error(message);
+}
+
+const logMsg = (msg: string) => {
+  console.log(msg);
+};
+
+function perfromJob(cb: (msg: string) => void, message: string) {
+  cb(message);
+}
+
+perfromJob(logMsg, "Hello World"); // this is valid because logMsg is a function that takes a string as an argument and returns void
+
+type UserInfo = {
+  name: string;
+  age: number;
+  greet: () => string;
+};
+
+let userInfoObj: UserInfo = {
+  name: "John Doe",
+  age: 38,
+  greet() {
+    console.log(
+      `Hello, my name is ${this.name} and I am ${this.age} years old.`,
+    );
+    return `Hello, my name is ${this.name} and I am ${this.age} years old.`;
+  },
+};
+
 export {};
