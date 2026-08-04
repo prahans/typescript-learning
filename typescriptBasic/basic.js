@@ -102,4 +102,18 @@ function process(val) {
         val.log();
     }
 }
+function generateError(msg) {
+    throw new Error(msg);
+}
+generateError("This is an error message");
+generateError();
+const person = {
+    name: "John Doe",
+    age: 38,
+    role: "Admin",
+};
+const person2 = {
+    name: "John Doe",
+    age: 38,
+};
 export {};

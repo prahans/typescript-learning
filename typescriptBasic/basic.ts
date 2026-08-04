@@ -175,4 +175,28 @@ function process(val: unknown) {
   }
 }
 
+function generateError(msg?: string) {
+  throw new Error(msg);
+}
+
+generateError("This is an error message");
+generateError();
+
+type employee = {
+  name: string;
+  age: number;
+  role?: role;
+};
+
+const person: employee = {
+  name: "John Doe",
+  age: 38,
+  role: "Admin",
+};
+
+const person2: employee = {
+  name: "John Doe",
+  age: 38,
+};
+
 export {};
