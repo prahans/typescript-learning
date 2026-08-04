@@ -33,9 +33,9 @@ user = [1, "John", 5, "Doe"]; // this is valid because user can be an array of s
 
 // tuples types
 
-let possibleResult: [number, number];
+// let possibleResult: [number, number];
 
-possibleResult = [1, 2]; // thi is valid because possibleResult is a tuple of two numbers
+// possibleResult = [1, 2]; // thi is valid because possibleResult is a tuple of two numbers
 // possibleResult = [1, 2, 3]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 // possibleResult = [1, "2"]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 
@@ -79,15 +79,30 @@ data = {
 
 // working with emums
 
-enum role {
-  Admin = "ADMIN",
-  User = "USER",
-  Guest = "GUEST",
-}
+// enum role {
+//   Admin = "ADMIN",
+//   User = "USER",
+//   Guest = "GUEST",
+// }
 
-let userRole: role;
+// let userRole: role;
 
-userRole = role.User; // this is valid because userRole is of type role
+// userRole = role.User; // this is valid because userRole is of type role
 //  userRole = "guest"; // this will cause a typescript error because userRole is of type role
+
+// popular way to use enums
+
+let userRole: "Admin" | "User" | "Guest" = "Admin";
+
+userRole = "User"; // this is valid because userRole is of type "Admin" | "User" | "Guest"
+userRole = "Guest"; // this is valid because userRole is of type "Admin" | "User" | "Guest"
+
+let possibleResult: [1 | -1, 1 | -1];
+possibleResult = [1, -1]; // this is valid because possibleResult is a tuple of two numbers
+possibleResult = [-1, 1]; // this is valid because possibleResult is a tuple of two numbers
+possibleResult = [1, 1]; // this is valid because possibleResult is a tuple of two numbers
+possibleResult = [-1, -1]; // this is valid because possibleResult is a tuple of two numbers
+// possibleResult = [1, 0]; // this will cause a typescript error because possibleResult is a tuple of two numbers
+// possibleResult = [5, 1]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 
 export {};

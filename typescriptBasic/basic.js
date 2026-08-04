@@ -23,8 +23,8 @@ user = [1, 5];
 user = ["John", "Doe"];
 user = [1, "John", 5, "Doe"]; // this is valid because user can be an array of strings and numbers
 // tuples types
-let possibleResult;
-possibleResult = [1, 2]; // thi is valid because possibleResult is a tuple of two numbers
+// let possibleResult: [number, number];
+// possibleResult = [1, 2]; // thi is valid because possibleResult is a tuple of two numbers
 // possibleResult = [1, 2, 3]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 // possibleResult = [1, "2"]; // this will cause a typescript error because possibleResult is a tuple of two numbers
 let userInfo = {
@@ -52,4 +52,22 @@ data = {
     // record4: false, // this will cause a typescript error because data is a record of string keys and string or number values
     // record5: ["Reading", "Traveling", "Cooking"], // this will cause a typescript error because data is a record of string keys and string or number values
 };
+// working with emums
+// enum role {
+//   Admin = "ADMIN",
+//   User = "USER",
+//   Guest = "GUEST",
+// }
+// let userRole: role;
+// userRole = role.User; // this is valid because userRole is of type role
+//  userRole = "guest"; // this will cause a typescript error because userRole is of type role
+// popular way to use enums
+let userRole = "Admin";
+userRole = "User"; // this is valid because userRole is of type "Admin" | "User" | "Guest"
+userRole = "Guest"; // this is valid because userRole is of type "Admin" | "User" | "Guest"
+let possibleResult;
+possibleResult = [1, -1]; // this is valid because possibleResult is a tuple of two numbers
+possibleResult = [-1, 1]; // this is valid because possibleResult is a tuple of two numbers
+possibleResult = [1, 1]; // this is valid because possibleResult is a tuple of two numbers
+possibleResult = [-1, -1]; // this is valid because possibleResult is a tuple of two numbers
 export {};
