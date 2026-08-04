@@ -116,4 +116,10 @@ const person2 = {
     name: "John Doe",
     age: 38,
 };
+// nullish coalescing operator
+let input = "";
+// const didProvideInput = input || false;
+// console.log(didProvideInput); // output: false
+const didProvideInput = input ?? false;
+console.log(didProvideInput); // output: '' here only returns false if input is null or undefined
 export {};
