@@ -105,8 +105,6 @@ function process(val) {
 function generateError(msg) {
     throw new Error(msg);
 }
-generateError("This is an error message");
-generateError();
 const person = {
     name: "John Doe",
     age: 38,
@@ -122,6 +120,14 @@ let input = "";
 // console.log(didProvideInput); // output: false
 const didProvideInput = input ?? false;
 console.log(didProvideInput); // output: '' here only returns false if input is null or undefined
+// class Person {
+//   name: string;
+//   age: number;
+//   constructor(name: string, age: number) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
 class Person {
     name;
     age;
@@ -130,5 +136,9 @@ class Person {
         this.age = age;
     }
 }
-new Person("John Doe", 38);
+const p1 = new Person("John Doe", 38);
+const p2 = new Person("max", 34);
+console.log(p1, p2);
+console.log(p1.name, p2.name);
+console.log(p1.age, p2.age);
 export {};

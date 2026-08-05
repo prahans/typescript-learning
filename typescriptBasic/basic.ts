@@ -179,8 +179,8 @@ function generateError(msg?: string) {
   throw new Error(msg);
 }
 
-generateError("This is an error message");
-generateError();
+// generateError("This is an error message");
+// generateError();
 
 type employee = {
   name: string;
@@ -209,16 +209,27 @@ let input = "";
 const didProvideInput = input ?? false;
 console.log(didProvideInput); // output: '' here only returns false if input is null or undefined
 
-class Person {
-  name: string;
-  age: number;
+// class Person {
+//   name: string;
+//   age: number;
 
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age;
-  }
+//   constructor(name: string, age: number) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+class Person {
+  constructor(
+    public name: string,
+    public age: number,
+  ) {}
 }
 
-new Person("John Doe", 38);
+const p1 = new Person("John Doe", 38);
+const p2 = new Person("max", 34);
+console.log(p1, p2);
+console.log(p1.name, p2.name);
+console.log(p1.age, p2.age);
 
 export {};
