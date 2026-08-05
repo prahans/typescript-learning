@@ -150,17 +150,36 @@ console.log(p1.name, p2.name);
 console.log(p1.age, p2.age);
 p1.hobbies.push("Reading");
 // p1.hobbies = ["Traveling"]; // this will cause a typescript error because hobbies is a readonly property
+// class User {
+//   constructor(private firstName: string, private  lastName: string) {
+//   }
+//   get fullName() {
+//     return `${this.firstName} ${this.lastName}`;
+//   }
+// }
+// const user = new User("John", "Doe");
+// console.log(user.fullName); // output: John Doe
 class User {
-    firstName;
-    lastName;
-    constructor(firstName, lastName) {
-        this.firstName = firstName;
-        this.lastName = lastName;
+    _firstName = "";
+    _lastName = "";
+    set firstName(name) {
+        if (name.trim().length === 0) {
+            throw new Error("First name cannot be empty");
+        }
+        this._firstName = name;
+    }
+    set lastName(name) {
+        if (name.trim().length === 0) {
+            throw new Error("Last name cannot be empty");
+        }
+        this._lastName = name;
     }
     get fullName() {
-        return `${this.firstName} ${this.lastName}`;
+        return this._firstName + " " + this._lastName;
     }
 }
-const user = new User("John", "Doe");
-console.log(user.fullName); // output: John Doe
+const max = new User();
+max.firstName = "Max";
+max.lastName = "Smith";
+console.log(max.fullName); // output: Max Smith
 export {};
