@@ -18,10 +18,10 @@ let hobbines = ["Reading", "Traveling", "Cooking"];
 // let hobbines: string[] = ["Reading", "Traveling", "Cooking"];
 // hobbines.push(10); // this will cause a typescript error because hobbines is an array of strings
 // let user: (string | number)[];
-let user;
-user = [1, 5];
-user = ["John", "Doe"];
-user = [1, "John", 5, "Doe"]; // this is valid because user can be an array of strings and numbers
+// let user: Array<string | number>;
+// user = [1, 5];
+// user = ["John", "Doe"];
+// user = [1, "John", 5, "Doe"]; // this is valid because user can be an array of strings and numbers
 // tuples types
 // let possibleResult: [number, number];
 // possibleResult = [1, 2]; // thi is valid because possibleResult is a tuple of two numbers
@@ -52,6 +52,12 @@ data = {
     // record4: false, // this will cause a typescript error because data is a record of string keys and string or number values
     // record5: ["Reading", "Traveling", "Cooking"], // this will cause a typescript error because data is a record of string keys and string or number values
 };
+// type User = {
+//   name: string;
+//   id: number | string;
+//   role: role;
+//   permissions: string[];
+// };
 let userRole = "Admin";
 userRole = "User"; // this is valid because userRole is of type role
 userRole = "Guest"; // this is valid because userRole is of type role
@@ -143,4 +149,18 @@ console.log(p1, p2);
 console.log(p1.name, p2.name);
 console.log(p1.age, p2.age);
 p1.hobbies.push("Reading");
+// p1.hobbies = ["Traveling"]; // this will cause a typescript error because hobbies is a readonly property
+class User {
+    firstName;
+    lastName;
+    constructor(firstName, lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+    get fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
+}
+const user = new User("John", "Doe");
+console.log(user.fullName); // output: John Doe
 export {};

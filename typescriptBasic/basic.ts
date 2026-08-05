@@ -25,11 +25,11 @@ let hobbines = ["Reading", "Traveling", "Cooking"];
 // hobbines.push(10); // this will cause a typescript error because hobbines is an array of strings
 
 // let user: (string | number)[];
-let user: Array<string | number>;
+// let user: Array<string | number>;
 
-user = [1, 5];
-user = ["John", "Doe"];
-user = [1, "John", 5, "Doe"]; // this is valid because user can be an array of strings and numbers
+// user = [1, 5];
+// user = ["John", "Doe"];
+// user = [1, "John", 5, "Doe"]; // this is valid because user can be an array of strings and numbers
 
 // tuples types
 
@@ -94,12 +94,12 @@ data = {
 
 type role = "Admin" | "User" | "Guest";
 
-type User = {
-  name: string;
-  id: number | string;
-  role: role;
-  permissions: string[];
-};
+// type User = {
+//   name: string;
+//   id: number | string;
+//   role: role;
+//   permissions: string[];
+// };
 
 let userRole: role = "Admin";
 
@@ -235,5 +235,17 @@ console.log(p1.name, p2.name);
 console.log(p1.age, p2.age);
 p1.hobbies.push("Reading");
 // p1.hobbies = ["Traveling"]; // this will cause a typescript error because hobbies is a readonly property
+
+class User {
+  constructor(private firstName: string, private  lastName: string) {
+  }
+
+  get fullName() {
+    return `${this.firstName} ${this.lastName}`;
+  }
+}
+
+const user = new User("John", "Doe");
+console.log(user.fullName); // output: John Doe
 
 export {};
