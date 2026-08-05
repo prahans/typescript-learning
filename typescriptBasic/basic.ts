@@ -330,6 +330,22 @@ interface Authecatable {
 
 let user: Authecatable;
 
+class UserAccount implements Authecatable {
+  constructor(
+    public email: string,
+    public password: string,
+    public role: string,
+  ) {}
+
+  login() {
+    // reach out to the server and verify the credentials
+  }
+
+  logout() {
+    // reach out to the server and log the user out
+  }
+}
+
 user = {
   email: "abc@gmail.com",
   password: "123456",

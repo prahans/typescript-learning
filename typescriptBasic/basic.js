@@ -228,6 +228,22 @@ class sideDrawerElement extends uiElement {
     }
 }
 let user;
+class UserAccount {
+    email;
+    password;
+    role;
+    constructor(email, password, role) {
+        this.email = email;
+        this.password = password;
+        this.role = role;
+    }
+    login() {
+        // reach out to the server and verify the credentials
+    }
+    logout() {
+        // reach out to the server and log the user out
+    }
+}
 user = {
     email: "abc@gmail.com",
     password: "123456",
