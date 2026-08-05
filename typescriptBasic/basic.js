@@ -195,12 +195,17 @@ const max = new User();
 max.firstName = "Max";
 max.lastName = "Smith";
 console.log(max.fullName); // output: Max Smith
+// max._firstName = "John"; // this is valid because _firstName is a protected property and can be accessed by subclasses
 class Employee extends User {
     jobTitle;
     constructor(jobTitle) {
         super();
         this.jobTitle = jobTitle;
         // super.firstName = "John";
+    }
+    work() {
+        console.log(this._firstName);
+        super.firstName = "John";
     }
 }
 export {};
