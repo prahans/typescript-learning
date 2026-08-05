@@ -220,6 +220,8 @@ console.log(didProvideInput); // output: '' here only returns false if input is 
 // }
 
 class Person {
+  readonly hobbies: string[] = [];
+
   constructor(
     public name: string,
     public age: number,
@@ -231,5 +233,7 @@ const p2 = new Person("max", 34);
 console.log(p1, p2);
 console.log(p1.name, p2.name);
 console.log(p1.age, p2.age);
+p1.hobbies.push("Reading");
+// p1.hobbies = ["Traveling"]; // this will cause a typescript error because hobbies is a readonly property
 
 export {};

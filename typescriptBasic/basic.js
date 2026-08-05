@@ -131,6 +131,7 @@ console.log(didProvideInput); // output: '' here only returns false if input is 
 class Person {
     name;
     age;
+    hobbies = [];
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -141,4 +142,5 @@ const p2 = new Person("max", 34);
 console.log(p1, p2);
 console.log(p1.name, p2.name);
 console.log(p1.age, p2.age);
+p1.hobbies.push("Reading");
 export {};
