@@ -299,4 +299,21 @@ class Employee extends User {
   }
 }
 
+abstract class uiElement {
+  constructor(public identifier: string) {}
+  clone(targetLocation: string) {
+    // logic to duplicate the element and place it in the target location
+  }
+}
+
+// let uiElement = new uiElement
+
+class sideDrawerElement extends uiElement {
+  constructor(
+    public identifier: string,
+    public location: "left" | "right",
+  ) {
+    super(identifier);
+  }
+}
 export {};

@@ -208,4 +208,23 @@ class Employee extends User {
         super.firstName = "John";
     }
 }
+class uiElement {
+    identifier;
+    constructor(identifier) {
+        this.identifier = identifier;
+    }
+    clone(targetLocation) {
+        // logic to duplicate the element and place it in the target location
+    }
+}
+// let uiElement = new uiElement
+class sideDrawerElement extends uiElement {
+    identifier;
+    location;
+    constructor(identifier, location) {
+        super(identifier);
+        this.identifier = identifier;
+        this.location = location;
+    }
+}
 export {};
