@@ -316,4 +316,12 @@ class sideDrawerElement extends uiElement {
     super(identifier);
   }
 }
+
+interface Authecatable {
+  email: string;
+  password: string;
+  login(): void;
+  logout(): void;
+}
+
 export {};
