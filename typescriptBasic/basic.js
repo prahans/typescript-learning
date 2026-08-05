@@ -231,6 +231,7 @@ let user;
 user = {
     email: "abc@gmail.com",
     password: "123456",
+    role: "Admin",
     login() {
         // reach out to the server and verify the credentials
         console.log("User logged in");
