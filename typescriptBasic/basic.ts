@@ -209,4 +209,16 @@ let input = "";
 const didProvideInput = input ?? false;
 console.log(didProvideInput); // output: '' here only returns false if input is null or undefined
 
+class Person {
+  name: string;
+  age: number;
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+new Person("John Doe", 38);
+
 export {};
