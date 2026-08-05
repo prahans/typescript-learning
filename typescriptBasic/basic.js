@@ -227,4 +227,17 @@ class sideDrawerElement extends uiElement {
         this.location = location;
     }
 }
+let user;
+user = {
+    email: "abc@gmail.com",
+    password: "123456",
+    login() {
+        // reach out to the server and verify the credentials
+        console.log("User logged in");
+    },
+    logout() {
+        // reach out to the server and log the user out
+        console.log("User logged out");
+    },
+};
 export {};
