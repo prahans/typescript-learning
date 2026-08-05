@@ -182,22 +182,22 @@ function generateError(msg?: string) {
 // generateError("This is an error message");
 // generateError();
 
-type employee = {
-  name: string;
-  age: number;
-  role?: role;
-};
+// type employee = {
+//   name: string;
+//   age: number;
+//   role?: role;
+// };
 
-const person: employee = {
-  name: "John Doe",
-  age: 38,
-  role: "Admin",
-};
+// const person: employee = {
+//   name: "John Doe",
+//   age: 38,
+//   role: "Admin",
+// };
 
-const person2: employee = {
-  name: "John Doe",
-  age: 38,
-};
+// const person2: employee = {
+//   name: "John Doe",
+//   age: 38,
+// };
 
 // nullish coalescing operator
 
@@ -285,5 +285,12 @@ const max = new User();
 max.firstName = "Max";
 max.lastName = "Smith";
 console.log(max.fullName); // output: Max Smith
+
+class Employee extends User {
+  constructor(public jobTitle: string) {
+    super();
+    // super.firstName = "John";
+  }
+}
 
 export {};

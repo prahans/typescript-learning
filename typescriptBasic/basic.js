@@ -111,15 +111,22 @@ function process(val) {
 function generateError(msg) {
     throw new Error(msg);
 }
-const person = {
-    name: "John Doe",
-    age: 38,
-    role: "Admin",
-};
-const person2 = {
-    name: "John Doe",
-    age: 38,
-};
+// generateError("This is an error message");
+// generateError();
+// type employee = {
+//   name: string;
+//   age: number;
+//   role?: role;
+// };
+// const person: employee = {
+//   name: "John Doe",
+//   age: 38,
+//   role: "Admin",
+// };
+// const person2: employee = {
+//   name: "John Doe",
+//   age: 38,
+// };
 // nullish coalescing operator
 let input = "";
 // const didProvideInput = input || false;
@@ -188,4 +195,12 @@ const max = new User();
 max.firstName = "Max";
 max.lastName = "Smith";
 console.log(max.fullName); // output: Max Smith
+class Employee extends User {
+    jobTitle;
+    constructor(jobTitle) {
+        super();
+        this.jobTitle = jobTitle;
+        // super.firstName = "John";
+    }
+}
 export {};
