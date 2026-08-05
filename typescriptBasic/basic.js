@@ -177,7 +177,13 @@ class User {
     get fullName() {
         return this._firstName + " " + this._lastName;
     }
+    static eid = "User-001";
+    static greet() {
+        console.log("Hello from User class");
+    }
 }
+User.greet(); // output: Hello from User class
+console.log(User.eid); // output: User-001
 const max = new User();
 max.firstName = "Max";
 max.lastName = "Smith";
