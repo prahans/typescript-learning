@@ -346,6 +346,11 @@ class UserAccount implements Authecatable {
   }
 }
 
+function authenticate(user: Authecatable) {
+  user.login();
+  console.log(`User with role ${user.role} has logged in`);
+}
+
 user = {
   email: "abc@gmail.com",
   password: "123456",
