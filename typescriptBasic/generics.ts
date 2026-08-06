@@ -31,4 +31,11 @@ function mergeObj<T extends object, U extends object>(a: T, b: U) {
 
 const merged = mergeObj({ name: "max" }, { age: 34 });
 
+class User<T> {
+  constructor(public id: T) {}
+}
+
+const user = new User("id1");
+user.id;
+
 export {};
