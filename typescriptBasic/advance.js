@@ -56,6 +56,7 @@ numOfWords.length;
 const numOfItems = getLength(["sport", "cookies"]);
 console.log(typeof numOfWords); // string
 console.log(typeof numOfItems); // number
+let someObj;
 let store = {};
 // ...
 store.id = 5;
@@ -65,3 +66,9 @@ store.isOpen = true;
 let role = ["Admin", "guest", "Editor"];
 // role.push("max");  Property 'push' does not exist on type 'readonly ["Admin", "guest", "Editor"]'.
 const firstRole = role[0];
+// The "satisfies" Keyword
+const dataEntries = {
+    entry1: 0.51,
+    entry2: -1.45,
+};
+// dataEntries.entry3;

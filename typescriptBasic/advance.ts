@@ -145,3 +145,11 @@ let role = ["Admin", "guest", "Editor"] as const;
 
 // role.push("max");  Property 'push' does not exist on type 'readonly ["Admin", "guest", "Editor"]'.
 const firstRole = role[0];
+
+// The "satisfies" Keyword
+const dataEntries = {
+  entry1: 0.51,
+  entry2: -1.45,
+} satisfies Record<string, number>;
+
+// dataEntries.entry3;
