@@ -105,7 +105,12 @@ function init(entity: Entity) {
   return;
 }
 
-function getLength(val: string | any) {
+// working with function overload
+
+function getLength(val: string): string;
+function getLength(val: any[]): string;
+
+function getLength(val: string | any[]) {
   if (typeof val === "string") {
     const numberOfWords = val.split(" ").length;
     return `${numberOfWords} words`;
@@ -115,4 +120,7 @@ function getLength(val: string | any) {
 }
 
 const numOfWords = getLength("does this work?");
+numOfWords.length;
 const numOfItems = getLength(["sport", "cookies"]);
+console.log(typeof numOfWords); // string
+console.log(typeof numOfItems); // number
