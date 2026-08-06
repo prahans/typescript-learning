@@ -124,3 +124,16 @@ numOfWords.length;
 const numOfItems = getLength(["sport", "cookies"]);
 console.log(typeof numOfWords); // string
 console.log(typeof numOfItems); // number
+
+// making sense of index type
+type DataStore = {
+  [props: string]: number | boolean;
+};
+
+let store: DataStore = {};
+
+// ...
+
+store.id = 5;
+store.isOpen = true;
+// store.name = "max";
