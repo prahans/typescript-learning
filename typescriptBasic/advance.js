@@ -54,5 +54,10 @@ function getLength(val) {
 const numOfWords = getLength("does this work?");
 numOfWords.length;
 const numOfItems = getLength(["sport", "cookies"]);
-console.log(typeof numOfWords);
-console.log(typeof numOfItems);
+console.log(typeof numOfWords); // string
+console.log(typeof numOfItems); // number
+let store = {};
+// ...
+store.id = 5;
+store.isOpen = true;
+// store.name = "max";
