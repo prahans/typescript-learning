@@ -14,4 +14,8 @@ function merge(a, b) {
 }
 // const ids = merge<number, string>(1, "max");
 const ids = merge(1, "max");
+function mergeObj(a, b) {
+    return { ...a, ...b };
+}
+const merged = mergeObj({ name: "max" }, { age: 34 });
 export {};
