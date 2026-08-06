@@ -18,4 +18,12 @@ function mergeObj(a, b) {
     return { ...a, ...b };
 }
 const merged = mergeObj({ name: "max" }, { age: 34 });
+class User {
+    id;
+    constructor(id) {
+        this.id = id;
+    }
+}
+const user = new User("id1");
+user.id;
 export {};
