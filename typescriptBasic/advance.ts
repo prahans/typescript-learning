@@ -137,3 +137,9 @@ let store: DataStore = {};
 store.id = 5;
 store.isOpen = true;
 // store.name = "max";
+
+// Constant Types with "as const"
+let role = ["Admin", "guest", "Editor"] as const;
+
+// role.push("max");  Property 'push' does not exist on type 'readonly ["Admin", "guest", "Editor"]'.
+const firstRole = role[0];
