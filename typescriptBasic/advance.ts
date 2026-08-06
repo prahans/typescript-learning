@@ -52,17 +52,20 @@ interface Status {
 interface AccessFileData extends FileData, Status {}
 interface AccessDatabaseData extends DatabaseData, Status {}
 
-type FileSource = { path: string };
-const fileSource: FileSource = { path: "/some/path/to/file.csv" };
+type FileSource = { type: "file"; path: string };
+const fileSource: FileSource = { type: "file", path: "/some/path/to/file.csv" };
 
-type DBSource = { connectionUrl: string };
-const dbSource: DBSource = { connectionUrl: "connection-url" };
+type DBSource = { type: "db"; connectionUrl: string };
+const dbSource: DBSource = { type: "db", connectionUrl: "connection-url" };
 
-type Source = FileData | DBSource;
+type Source = FileSource | DBSource;
 function loadData(source: Source) {
-  if ("path" in source) {
+  //   if ("path" in source) {
+  if (source.type === "file") {
+    // source.path
     // source.path;
     return;
   }
+  //   source.connectionUrl
   //   source.connectionUrl;
 }
